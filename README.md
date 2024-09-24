@@ -2,7 +2,7 @@
 
 # Spring Boot + Thymeleaf + MySQL + Docker
 
-## Application could be runned only by using Docker:
+## Application could be ran by using Docker:
 
 ```
 docker-compose up --build
