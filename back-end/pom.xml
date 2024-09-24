@@ -21,7 +21,6 @@
         <mysql-connector-java.version>8.0.33</mysql-connector-java.version>
         <hibernate-core.version>6.5.2.Final</hibernate-core.version>
         <map-struct.version>1.5.5.Final</map-struct.version>
-        <jwt.version>0.12.5</jwt.version>
     </properties>
 
     <dependencies>
@@ -44,6 +43,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
 
         <dependency>
@@ -79,6 +83,19 @@
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${map-struct.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${map-struct.version}</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

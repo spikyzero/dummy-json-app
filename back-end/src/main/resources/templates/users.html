@@ -4,7 +4,30 @@
     <title>Users</title>
 </head>
 <body>
+
 <h1>Welcome, User!</h1>
 <a th:href="@{/logout}">Logout</a>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Body</th>
+        <th>Post ID</th>
+        <th>Username</th>
+        <th>Updated At</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="comment : ${comments}">
+        <td th:text="${comment.id}"></td>
+        <td th:text="${comment.body}"></td>
+        <td th:text="${comment.postId}"></td>
+        <td th:text="${comment.username}"></td>
+        <td th:text="${comment.updatedAt}"></td>
+    </tr>
+    </tbody>
+</table>
+
 </body>
 </html>
