@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  app:
+    build: ./back-end
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dummy-json-app-db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: 12345678
+    ports:
+      - "3307:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "user", "-p12345678"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+      timeout: 10s
