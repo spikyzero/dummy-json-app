@@ -22,7 +22,7 @@ public class WebController {
         this.commentFacade = commentFacade;
     }
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home() {
         return PAGE_HOME;
     }
