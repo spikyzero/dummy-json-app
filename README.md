@@ -1,4 +1,4 @@
-# dummy-json-app
+# Dummy Json App
 
 # Spring Boot + Thymeleaf + MySQL + Docker
 
